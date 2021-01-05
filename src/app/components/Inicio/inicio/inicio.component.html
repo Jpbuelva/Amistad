@@ -1,0 +1,50 @@
+<mat-card class="card">
+    <mat-card-title>Gráficas</mat-card-title>
+
+
+    <mat-card-content>
+
+
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="20px">
+            <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+                <mat-card-header class="cardtitle">
+
+                    <mat-card-title>Cumpleaños</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <h1>{{cumple}}</h1>
+                </mat-card-content>
+
+                <mat-card-footer>
+
+                    <h6>
+                        <a mat-raised-button color="primary" [routerLink]="['Contacto']">
+                            Ver Cumpleañeros </a>
+                    </h6>
+                </mat-card-footer>
+
+            </mat-card>
+
+            <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+
+                <mat-card-header class="cardtitle">
+
+                    <mat-card-title> Numero de Contactos</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <h1>{{cantidad}}</h1>
+                </mat-card-content>
+
+                <mat-card-footer>
+                    <h6>
+                        <button mat-raised-button color="primary" (click)="redirec()">
+                            Mis Contacto </button>
+                    </h6>
+                </mat-card-footer>
+
+
+            </mat-card>
+        </div>
+
+    </mat-card-content>
+</mat-card>

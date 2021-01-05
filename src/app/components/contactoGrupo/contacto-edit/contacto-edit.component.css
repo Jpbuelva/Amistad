@@ -1,0 +1,33 @@
+.form-element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+::ng-deep .sucess {
+    background-color: rgb(41, 161, 81)!important;
+    color: white!important;
+}
+
+::ng-deep .info {
+    background-color: rgb(79, 175, 230)!important;
+    color: white;
+}
+
+::ng-deep .danger {
+    background-color: rgb(236, 54, 84)!important;
+    color: white!important;
+}
+
+::ng-deep .alert {
+    background-color: rgb(236, 238, 115)!important;
+    color: white!important;
+}

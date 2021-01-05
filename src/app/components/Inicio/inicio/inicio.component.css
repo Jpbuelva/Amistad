@@ -1,0 +1,24 @@
+ .card {
+     margin: 20px;
+ }
+ 
+ .two,
+ div.colored>div:nth-child(10n+2) {
+     background-color: #3949ab;
+ }
+ 
+ h1 {
+     font-size: 10vw;
+     text-align: center;
+ }
+ 
+ h6 {
+     font-size: 1.2vw;
+     text-align: center;
+ }
+ 
+ .cardtitle {
+     background: #f3f2f1;
+     font-family: ui-rounded;
+     padding-top: 3px;
+ }

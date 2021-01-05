@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">Agregar Contacto</span>
+</mat-toolbar>
+<form [formGroup]="formAgregar">
+    <mat-form-field class="form-element">
+        <input matInput placeholder="Identificación" type="number" formControlName="identificacion" [errorStateMatcher]="matcher" />
+        <mat-error *ngIf="hasError('identificacion', 'required')">
+            Ingrese un N° Documento.
+        </mat-error>
+
+    </mat-form-field>
+
+
+
+    <mat-form-field class="form-element">
+        <input matInput placeholder="Nombres y Apellidos" type="text" formControlName="nombre" [errorStateMatcher]="matcher" />
+        <mat-error *ngIf="hasError('nombre', 'required')">
+            Ingrese Nombres y Apellidos.
+        </mat-error>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="form-element">
+
+        <input matInput placeholder="Dirección" type="text" formControlName="direccion" [errorStateMatcher]="matcher" />
+        <mat-error *ngIf="hasError('direccion', 'required')">
+            Ingrese una Dirección Residencia.
+        </mat-error>
+
+    </mat-form-field>
+
+
+    <mat-form-field class="form-element">
+
+        <input matInput type="text" placeholder="N° Teléfono" formControlName="celular" [errorStateMatcher]="matcher" />
+        <mat-error *ngIf="hasError('celular', 'required')">
+            Ingrese un Numero de Teléfono.
+        </mat-error>
+
+
+    </mat-form-field>
+
+
+
+    <mat-form-field class="form-element">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fechacumple" [errorStateMatcher]="matcher">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi="true" #picker></mat-datepicker>
+        <mat-error *ngIf="hasError('fechacumple', 'required')">
+            Ingrese una Fecha de Nacimiento.
+        </mat-error>
+
+    </mat-form-field>
+
+</form>
+<!-- Botones -->
+<section>
+    <div class="example-button-row">
+        <button mat-raised-button [disabled]="!formAgregar.valid" color="primary" type="submit" (click)="onSubmit()">Guardar</button>
+
+        <button mat-raised-button (click)="onClose()">Cancelar</button>
+    </div>
+</section>
