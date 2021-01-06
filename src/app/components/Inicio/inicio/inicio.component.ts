@@ -1,4 +1,6 @@
+import { ModalDetallesComponent } from './../modal-detalles/modal-detalles.component';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Router, RouterModule } from '@angular/router';
 import { ContactoEntity } from 'src/app/models/contacto-entity';
 import { DataService } from '../../../service/data.service';
@@ -15,7 +17,8 @@ export class InicioComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private dataService: DataService) {
+    private dataService: DataService,
+    public dialog: MatDialog) {
     this.CantidadContacto();
     // this.Cumple();
 
@@ -50,6 +53,19 @@ export class InicioComponent implements OnInit {
         }
       }
     }
+  }
+
+  detalle() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '40%';
+    dialogConfig.data = this.contactos;
+    const dialogRef = this.dialog.open(ModalDetallesComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(result => {
+      
+    });
   }
 
 }

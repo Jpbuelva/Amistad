@@ -39,7 +39,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   ],
   providers: [DataService, DatePipe],
   bootstrap: [AppComponent],
-  entryComponents: [ContactoComponent, ContactoEditComponent,ContactoBorrarComponent]
+  entryComponents: [
+    ModalDetallesComponent,
+    ContactoComponent,
+    ContactoEditComponent,
+    ContactoBorrarComponent]
 
 })
 export class AppModule { }
